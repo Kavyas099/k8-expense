@@ -16,16 +16,15 @@ selector:
     project: expense
     env: dev
   template:
-  metadata:
-    
-    labels:
-      project: expense
-      env: dev
-      component: backend
-  spec:
-    containers:
-    - name: nginx
-      image: kavya478/backend:2.0
+    metadata:
+      labels:
+        project: expense
+        env: dev
+        component: backend
+    spec:
+      containers:
+      - name: nginx
+        image: kavya478/backend:2.0
 
 ---
 
