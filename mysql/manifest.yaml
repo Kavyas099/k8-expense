@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: svc-pod
+  namespace: expense
   labels:
     project: expense
     env: dev
@@ -32,12 +33,12 @@ metadata:
     env: dev
  
 spec:
-  type: LoadBalancer
+
   selector:
     project: expense
     env: dev
   ports:
   - protocol: TCP
-    port: 80
-    nodePort: 32676
-    targetPort: 80
+    port: 3306
+   
+    targetPort: 3306
