@@ -11,11 +11,11 @@ metadata:
     component: backend
 spec:
   replicas: 2
-selector:
-  matchLabels:
-    project: expense
-    env: dev
-    component: backend
+  selector:
+    matchLabels:
+      project: expense
+      env: dev
+      component: backend
   template:
     metadata:
       labels:
