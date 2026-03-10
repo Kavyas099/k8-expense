@@ -1,0 +1,49 @@
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: svc-pod
+  labels:
+    project: expense
+    env: dev
+    component: backend
+spec:
+  replicas: 2
+selector:
+  matchLabels:
+    project: expense
+    env: dev
+  template:
+  metadata:
+    name: svc
+    labels:
+      project: expense
+      env: dev
+      component: backend
+  spec:
+    containers:
+    - name: nginx
+      image: kavya478/backend:2.0
+
+---
+
+apiVersion: v1
+kind: service
+metadata:
+  name: pod-spec
+  labels:
+    project: expense
+    env: dev
+ 
+spec:
+  type: LoadBalancer
+  selector:
+    project: expense
+    env: dev
+    component: backend
+  ports:
+  - protocol: TCP
+    port: 80
+    nodePort: 32675
+    targetPort: 80
