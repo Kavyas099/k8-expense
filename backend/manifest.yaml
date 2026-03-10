@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: kavya478/backend:2.0
+        image: joindevops/backend:1.0.0
 
 ---
 
