@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: svc-pod
+  name: mytsql
   namespace: expense
   labels:
     project: expense
