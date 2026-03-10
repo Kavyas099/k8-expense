@@ -29,7 +29,7 @@ kind: Service
 metadata:
   name: mysql
   labels:
-    project: expense
+    project: exp
     env: dev
  
 spec:
