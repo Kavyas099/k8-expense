@@ -35,7 +35,7 @@ metadata:
   name: frontend
 spec:
   type: LoadBalancer
-  selectors:
+  selector:
     project: expense
     env: frontend
     component: frontend
