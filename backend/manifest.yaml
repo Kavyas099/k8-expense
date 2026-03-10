@@ -3,7 +3,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: svc-pod
+  name: backend
   namespace: expense
   labels:
     project: expense
@@ -30,7 +30,7 @@ selector:
 ---
 
 apiVersion: v1
-kind: service
+kind: Service
 metadata:
   name: pod-spec
   labels:
