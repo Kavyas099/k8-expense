@@ -8,10 +8,10 @@ metadata:
     env: dev
 spec:
   replicas: 2
-selector:
-  matchLabels:
-    project: expense
-    env: dev
+  selector:
+    matchLabels:
+      project: expense
+      env: dev
   template:
     metadata:
       labels:
