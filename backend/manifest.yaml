@@ -15,6 +15,7 @@ selector:
   matchLabels:
     project: expense
     env: dev
+    component: backend
   template:
     metadata:
       labels:
