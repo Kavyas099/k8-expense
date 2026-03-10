@@ -12,15 +12,15 @@ spec:
     matchLabels:
       project: expense
       env: dev
-    template:
-      metadata:
-        labels:
-          project: expense
-          env: dev
-      spec:
-      containers:
-      - name: nginx
-        image: kavya478/mysql:2.0
+  template:
+    metadata:
+      labels:
+        project: expense
+        env: dev
+    spec:
+    containers:
+    - name: nginx
+      image: kavya478/mysql:2.0
 
 ---
 
